@@ -12,7 +12,7 @@ export default [
         link: 'https://github.com/alibardide5124/ComposeAdvancedShadow',
     },
     {
-        title: 'AI Nerf Gun',
+        title: 'Imagine',
         imgUrl: '/assets/Imagine.png',
         stack: [ 'Android', 'Kotlin', 'XML' ],
         link: 'https://github.com/alibardide5124/Imagine',
