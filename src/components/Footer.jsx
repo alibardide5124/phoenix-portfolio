@@ -61,10 +61,10 @@ function Footer() {
                 <a href="https://instagram.com/alibardide.5124" target='_blank' rel="noopener noreferrer">
                     {instagram}
                 </a>
-                <a href="https://instagram.com/alibardide.5124" target='_blank' rel="noopener noreferrer">
+                <a href="https://twitter.com/Ph03nix0" target='_blank' rel="noopener noreferrer">
                     {twitter}
                 </a>
-                <a href="https://linkedin.com/alibardide" target='_blank' rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/alibardide" target='_blank' rel="noopener noreferrer">
                     {linkedIn}
                 </a>
                 <a href="https://youtube.com/@AliBardide" target='_blank' rel="noopener noreferrer">
