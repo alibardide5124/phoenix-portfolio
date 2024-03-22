@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Intro from "./components/Intro"
+import Stack from "./components/Stack"
 import Portfolio from "./components/Portfolio"
 import Timeline from "./components/Timeline"
 import Contact from "./components/Contact"
@@ -70,6 +71,7 @@ function App() {
         <div className='transition ease-in-out bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter'>
           <div className="max-2-5xl w-11/12 mx-auto">
             <Intro />
+            <Stack />
             <Portfolio />
             <Timeline />
             <Contact />

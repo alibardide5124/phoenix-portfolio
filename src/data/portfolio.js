@@ -9,12 +9,12 @@ export default [
         title: 'Compose Advanced Shadow',
         imgUrl: '/assets/composeshadow.png',
         stack: [ 'Android', 'Kotlin', 'Jetpack Compose' ],
-        link: 'https://example.com',
+        link: 'https://github.com/alibardide5124/ComposeAdvancedShadow',
     },
     {
         title: 'AI Nerf Gun',
         imgUrl: '/assets/Imagine.png',
         stack: [ 'Android', 'Kotlin', 'XML' ],
-        link: 'https://example.com',
+        link: 'https://github.com/alibardide5124/Imagine',
     },
 ]
