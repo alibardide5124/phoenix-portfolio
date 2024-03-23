@@ -51,7 +51,7 @@ function Intro() {
     )
     return (
         <div className="flex flex-col w-full h-auto mx-auto pt-12 justify-between items-center md:pt-[15%]">
-        <figure class="flex flex-col md:flex-row bg-slate-100 rounded-md p-8 dark:bg-slate-800 w-full md:w-8/12 mb-8 items-center drop-shadow-lg">
+        <figure class="flex flex-col md:flex-row bg-slate-100/30 rounded-md p-8 dark:bg-slate-800/30 w-full md:w-8/12 mb-8 items-center drop-shadow-lg backdrop-blur-md">
         <img class="flex w-9/12 md:w-48 md:h-auto md:rounded-md rounded-3xl mx-auto" 
         src="/assets/avatar.jpg"
          alt="" />

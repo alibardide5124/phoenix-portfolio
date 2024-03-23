@@ -37,7 +37,7 @@ function Portfolio() {
                 ))}
             </div>
             </div>
-            <h3 className="mt-6 md:mt-12 mx-4 text-lg md:text-xl font-bold">Wanna see more projects? Check out my GitHub</h3>
+            <h3 className="mt-6 md:mt-12 mx-4 text-lg md:text-xl font-bold">Intrested to see more projects? Check out my GitHub</h3>
             <div className="flex flex-col md:flex-row mt-5 md:mt-8 items-center justify-center">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <div className="transition ease-in-out hover:scale-110 flex flex-row rounded-md px-4 py-2 bg-stone-800 hover:bg-stone-700 dark:bg-stone-200 dark:hover:bg-stone-300 items-center justify-around inline-block  cursor-pointer w-auto">

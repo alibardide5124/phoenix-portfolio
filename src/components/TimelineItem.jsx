@@ -1,5 +1,4 @@
 import React from "react";
-import timeline from "../data/timeline";
 
 function TimelineItem({ year, title, duration, details }) {
     return (
