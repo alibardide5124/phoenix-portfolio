@@ -50,42 +50,35 @@ function Intro() {
 </svg>
     )
     return (
-        <div className="flex flex-col w-full h-auto mx-auto pt-12 justify-between items-center md:pt-[15%]">
-        <figure class="flex flex-col md:flex-row bg-slate-100/30 rounded-md p-8 dark:bg-slate-800/30 w-full md:w-8/12 mb-8 items-center drop-shadow-lg backdrop-blur-md">
-        <img class="flex w-9/12 md:w-48 md:h-auto md:rounded-md rounded-3xl mx-auto" 
-        src="/assets/avatar.jpg"
-         alt="" />
-        <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-            <p class="text-6xl font-medium">
-                Ali Bardide
-            </p>
-            <figcaption class="font-medium">
-            <div class="text-xl text-slate-800 dark:text-slate-200">
-                Software Engineer & Mobile Developer
+        <div className="overflow-hidden md:overflow-visible relative flex flex-col w-full h-auto pt-12 justify-between items-center md:mt-[15%]">
+            <div className="absolute max-h-sm max-w-lg">
+                <div className="relative">
+                    <div className="absolute top-0 -left-6 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+                    <div className="absolute top-0 -right-6 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
+                    <div className="absolute -bottom-84 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+                </div>
             </div>
-            <div class="text-slate-700 dark:text-slate-400 mt-6">
-            Indie developer & content creator passionate about Android development!  See my projects on GitHub and learn more on my YouTube channel.
-            </div>
-            </figcaption>
-            <div className="h-full flex flex-row justify-center mt-2 md:mt-0 gap-2">
-                <a href="https://github.com/alibardide5124" target='_blank' rel="noopener noreferrer">
-                    {github}
-                </a>
-                <a href="https://instagram.com/alibardide.5124" target='_blank' rel="noopener noreferrer">
-                    {instagram}
-                </a>
-                <a href="https://twitter.com/Ph03nix0" target='_blank' rel="noopener noreferrer">
-                    {twitter}
-                </a>
-                <a href="https://linkedin.com/in/alibardide" target='_blank' rel="noopener noreferrer">
-                    {linkedIn}
-                </a>
-                <a href="https://youtube.com/@AliBardide" target='_blank' rel="noopener noreferrer">
-                    {youtube}
-                </a>
-            </div>
-        </div>
-        </figure>
+            <figure class="flex flex-col lg:flex-row mx-auto w-11/12 bg-opacity-40 bg-slate-300 rounded-lg p-8 dark:bg-slate-700 md:w-8/12 mb-8 items-center">
+                <img class="flex w-9/12 md:w-48 md:h-auto md:rounded-md rounded-3xl mx-auto" src="/assets/avatar.jpg"alt="" />
+                <div class="pt-6 md:p-8 text-center lg:text-left space-y-4 items-center">
+                    <p class="text-6xl font-medium">Ali Bardide</p>
+                    <figcaption class="font-medium">
+                        <div class="text-xl text-slate-800 dark:text-slate-200">Software Engineer & Mobile Developer</div>
+                        <div class="text-slate-700 dark:text-slate-400 mt-6">Indie developer & content creator passionate about Android development! Checkout my projects on GitHub and learn more on my YouTube channel.</div>
+                    </figcaption>
+                    <div className="h-full flex flex-row items-center justify-center mt-2 md:mt-0 gap-2">
+                        <a href="https://github.com/alibardide5124" target='_blank' rel="noopener noreferrer">{github}</a>
+                        <a href="https://instagram.com/alibardide.5124" target='_blank' rel="noopener noreferrer">{instagram}</a>
+                        <a href="https://twitter.com/Ph03nix0" target='_blank' rel="noopener noreferrer">{twitter}</a>
+                        <a href="https://linkedin.com/in/alibardide" target='_blank' rel="noopener noreferrer">{linkedIn}</a>
+                        <a href="https://youtube.com/@AliBardide" target='_blank' rel="noopener noreferrer">{youtube}</a>
+                        <a href="https://cvresume.ir/r/DuXe7dbv-E_tRD8CZq7KGA" target="_blank" rel="noopener noreferrer" className="hidden lg:block text-sm transition ease-in-out rounded-md items-center justify-center py-1 px-2 font-bold opacity-50 hover:opacity-100 border-2 border-stone-900 dark:border-stone-200 cursor-pointer">View Resume</a>
+                    </div>
+                    <div className="lg:hidden flex justify-center mt-6">
+                        <a href="https://cvresume.ir/r/DuXe7dbv-E_tRD8CZq7KGA" target="_blank" rel="noopener noreferrer" className="text-sm transition ease-in-out rounded-md items-center justify-center py-1 px-2 font-bold opacity-50 hover:opacity-100 border-2 border-stone-900 dark:border-stone-200 cursor-pointer">View Resume</a>
+                    </div>
+                </div>
+            </figure>
         </div>
     )
 }
