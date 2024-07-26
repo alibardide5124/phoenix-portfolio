@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal from "./utils/Reveal";
 import FlipText from "./FlipText";
 import stack_work from "../data/stack_work";
-import timeline from "../data/timeline";
 import stack_fun from "../data/stack_fun";
 
 function Stack() {

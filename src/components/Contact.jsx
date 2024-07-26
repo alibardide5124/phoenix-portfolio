@@ -1,18 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Reveal from "./utils/Reveal";
 import FlipText from "./FlipText";
 
 function Contact() {
   return (
-    <div className="w-11/12 md:w-10/12 my-10 rounded-lg border-dashed border-2 border-[#212121] dark:border-[#FAFAFA] mx-auto">
+    <div className="w-11/12 md:w-10/12 my-10 rounded-lg border-dashed border-2 border-background dark:border-copy mx-auto">
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-4 my-10">
         <div className="flex flex-col w-full md:w-4/12">
           <Reveal>
             <h3 className="flex flex-wrap gap-2 items-center text-4xl font-black">
               General{" "}
               <span
-                className="flex flex-row text-[#228CDB]"
+                className="flex flex-row text-primary"
                 style={{ lineHeight: 0.85 }}
               >
                 <FlipText>Kenobi</FlipText>!
@@ -23,10 +22,10 @@ function Contact() {
             <p className="flex flex-wrap gap-1 items-center text-md font-regular">
               Request a qoute, or just drop a{" "}
               <span
-                className="flex flex-row text-[#AF3E4D]"
+                className="flex flex-row text-error"
                 style={{ lineHeight: 0.85 }}
               >
-                "<FlipText>Hello There</FlipText>"
+                &quot;<FlipText>Hello There</FlipText>&quot;
               </span>{" "}
               in this contact form. My inbox always has room for you.
             </p>
@@ -82,35 +81,23 @@ const ContactForm = ({ children }) => {
 
 const ContactInput = ({ name, placeholder, type }) => {
   return (
-    <motion.div
-      initial={{
-        borderColor: "#00FAFAFA",
-      }}
-      whileFocus={{
-        borderColor: "#21f663",
-      }}
+    <div
       className="flex flex-col"
     >
       <p>{placeholder}</p>
       <input required type={type} name={name} className={INPUT_CLASS} />
-    </motion.div>
+    </div>
   );
 };
 
 const ContactTextArea = ({ name, placeholder }) => {
   return (
-    <motion.div
-      initial={{
-        borderColor: "#00FAFAFA",
-      }}
-      whileFocus={{
-        borderColor: "#21f663",
-      }}
+    <div
       className="flex flex-col"
     >
       <p>{placeholder}</p>
       <textarea required name={name} rows="10" className={INPUT_CLASS} />
-    </motion.div>
+    </div>
   );
 };
 

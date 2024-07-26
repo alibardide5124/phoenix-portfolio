@@ -80,9 +80,8 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
         whileHover="animate"
         className="relative overflow-hidden aspect-[16/9] my-4 mx-2 w-full rounded-md bg-border cursor-pointer"
       >
-        <motion.div variants={imageVariant} className="px-10 pt-10 y-20 rounded-md overflow-hidden">
-        <img
-          
+        <motion.div variants={imageVariant} className="px-10 pt-10 y-20 rounded-md object-cover overflow-hidden">
+        <img 
           src={imageUrl}
         />
         </motion.div>

@@ -1,9 +1,7 @@
 import React from "react";
 import Reveal from "./utils/Reveal";
-import SpotlightButtonWrapper from "./SpotlightButton";
 import SpotlightButton from "./SpotlightButton";
 import FlipText from "./FlipText";
-import Social from "./Social";
 
 function Intro() {
   return (
@@ -19,7 +17,7 @@ function Intro() {
         <div className="pt-6 text-center lg:text-left space-y-4 items-center">
           <Reveal>
             <p className="flex flex-wrap text-6xl items-center gap-4 font-black">
-              Hey, I'm
+              Hey, I&apos;m
               <span
                 className="text-secondary items-center flex flex-row"
                 style={{ lineHeight: 0.85 }}
@@ -32,7 +30,7 @@ function Intro() {
             <Reveal>
               <div className="text-xl text-black dark:text-white">
                 <p>
-                  I'm a{" "}
+                  I&apos;m a{" "}
                   <span className="text-primary font-bold">
                     Mobile Developer
                   </span>
@@ -43,8 +41,8 @@ function Intro() {
               <p className="text-start">
                 a Computer Science student with over three years of experience
                 as a freelance developer. Specialized in Android and Laravel
-                development, and as always I'm enthusiastic about expanding my
-                knowledge. I've worked on various application and contributed to
+                development, and as always I&apos;m enthusiastic about expanding my
+                knowledge. I&apos;ve worked on various application and contributed to
                 open-source projects.
               </p>
             </Reveal>

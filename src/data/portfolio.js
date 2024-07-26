@@ -1,29 +1,52 @@
 export default [
-    {
-        title: 'News App',
-        year: 2022,
-        imageUrl: "https://steam-dev-portfolio-template.vercel.app/project-imgs/example-project.jpg",
-        github: 'https://github.com/alibardide5124/News-app',
-        skills: "Android - Jetpack Compose - Hilt - Room",
-        summary: "Just an app",
-        description: "I said its just an app  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    },
-    {
-        title: 'Compose Advanced Shadow',
-        year: 2023,
-        imageUrl: "https://steam-dev-portfolio-template.vercel.app/project-imgs/example-project.jpg",
-        github: 'https://github.com/alibardide5124/ComposeAdvancedShadow',
-        skills: "Jetpack Compose - Custom View - Library",
-        summary: "Just an app",
-        description: "I said its just an app",
-    },
-    {
-        title: 'Imagine',
-        year: 2021,
-        imageUrl: "https://steam-dev-portfolio-template.vercel.app/project-imgs/example-project.jpg",
-        github: 'https://github.com/alibardide5124/Imagine',
-        skills: "Android - XML - File Compression",
-        summary: "Just an app",
-        description: "I said its just an app",
-    },
-]
+  {
+    title: "News App",
+    year: 2022,
+    imageUrl: "/assets/news-banner.png",
+    github: "https://github.com/alibardide5124/News-app",
+    skills: "Android - Jetpack Compose - Hilt - Room",
+    summary: "Android news fetcher app Powered by newsapp.org service.",
+    description: `Android newsreader app uses newsapp.org API's. This application is an MVP for experiencing with different API and its android implementation using Jetpack Compose.
+It's of course made by Jetpack Compose and used different composable for experimenting with this new android design system.
+Also, I used responsive design that changes layout based on screen size, for mobile, tablet, foldable, and desktop it features different styles.
+It also uses material 3 styles and components and also uses a new material 3 color pallet.
+
+In general, it was an MVP for testing some Jetpack Compose features and getting to know it.`,
+  },
+  {
+    title: "notal",
+    year: 2021,
+    imageUrl: "/assets/notal-banner.png",
+    github: "https://github.com/alibardide5124/notal",
+    skills: "Android - Xml - Room database - Notifications",
+    summary: "Android note app which makes notes in your phone notification",
+    description: `notal is an android app that lets you make a simple note and pin it in your notification, so it's there all the time, and you get to see it in your lock screen.
+notal was one of my first projects that I built it open source. Before that I used to code projects, but they were lost in time and thankfully with GitHub I get to keep my projects such as notal itself.
+
+It uses XML design system and material 2, which is the latest design by its time.`
+  },
+  {
+    title: "Compose Advanced Shadow",
+    year: 2023,
+    imageUrl: "/assets/compose-shadow-banner.png",
+    github: "https://github.com/alibardide5124/ComposeAdvancedShadow",
+    skills: "Jetpack Compose - Custom View - Library",
+    summary: "Jetpack Compose library to make customizable shadows",
+    description: `ComposeAdvancedShadow is an open-source Jetpack Compose library that allows developers to add highly customizable shadows to UI elements in their Android applications.
+Unlike the default shadow implementation in Jetpack Compose, which can be complex and not very programmer-friendly, ComposeAdvancedShadow offers a more intuitive and flexible approach.
+You can easily adjust shadow parameters such as color, offset, blur radius, and spread to achieve the desired visual effect.
+The library is designed for seamless integration into existing Jetpack Compose projects and is optimized for performance to ensure smooth rendering, even with complex shadow effects.
+ComposeAdvancedShadow enhances the aesthetics of your app and provides the flexibility to create unique and engaging visual experiences.`,
+  },
+  {
+    title: "Imagine",
+    year: 2021,
+    imageUrl:"/assets/imagine-banner.png",
+    github: "https://github.com/alibardide5124/Imagine",
+    skills: "Android - XML - File Compression",
+    summary: "Android image compression without losing quality",
+    description: `Imagine is an open-source android app, that compress images up to 70%, and the good part is that it doesnt hurt the quality of your pictures.
+It built with xml design system and has very simple straight forward user interface. Just select your image and it does the magic.
+I used some image compression libraries which you can find on source project, and also made it easy to use.`,
+  },
+];

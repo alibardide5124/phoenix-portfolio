@@ -39,38 +39,16 @@ function App() {
       document.body.classList.remove('no-scroll');
     }
 
-    // Cleanup function to remove class when the component unmounts or modal state changes
     return () => {
       document.body.classList.remove('no-scroll');
     };
   }, [modalOpen]);
 
-  // useEffect(() => {
-  // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  //   setTheme("dark");
-  // } else {
-  //   setTheme("light");
-  // }
-  // setTheme("dark");
-  // }, []);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  // useEffect(() => {
-  //   if (theme === "dark") {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, [theme]);
-
   return (
     <>
       <div className="relative bg-white dark:bg-background text-stone-900 dark:text-stone-300 min-h-screen font-inter">
         <div>
-          <Header theme={theme} handleThemeSwitch={handleThemeSwitch} />
+          <Header />
           <main className="max-2-5xl">
             <Intro />
             <Stack />
