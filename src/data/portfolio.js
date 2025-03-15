@@ -1,5 +1,19 @@
 export default [
   {
+    title: "Valentine Game",
+    year: 2025,
+    imageUrl: "/assets/valentine-banner.png",
+    github: "https://github.com/alibardide5124/valentine-game",
+    skills: "Android - Jetpack Compose - Retro Style - Canvas",
+    summary: "Android retro-inspired ui game, to ask your valentine",
+    description: `I got the idea and used online assets to design and program this application. It uses compose Canvas an uses StateFlow to keep track of user inputs.
+    The main challenge was getting used to animations and moving character, and also changing character sprite, which was new to me.
+
+    Application ui is designed, inspired by Game Boy style, and pixel games.
+
+    It was fun.`,
+  },
+  {
     title: "News App",
     year: 2022,
     imageUrl: "/assets/news-banner.png",

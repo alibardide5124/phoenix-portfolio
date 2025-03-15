@@ -11,33 +11,31 @@ import Reveal from "./utils/Reveal";
 
 function Timeline() {
   return (
-    <div className="flex flex-col w-full justify-center items-center my-20">
-      <div className="flex flex-col w-full md:w-9/12 justify-center mx-4">
-        <div className="flex flex-row w-full items-center justify-between">
-          <Reveal>
-            <p className="font-black text-4xl">
-              Experiece
-              <span
-                className="text-primary text-6xl"
-                style={{ lineHeight: 0.35 }}
-              >
-                .
-              </span>
-            </p>
-          </Reveal>
-          <div className="grow h-px ml-6 bg-gray-500" />
-        </div>
-        {timeline.map((item, index) => (
-          <div key={index} className="mx-4 w-9.12">
-            <TimelineItem
-              year={item.year}
-              title={item.title}
-              duration={item.duration}
-              details={item.details}
-            />
-          </div>
-        ))}
+    <div className="w-full md:w-9/12 p-8 md:p-0 items-center mx-auto justify-center">
+      <div className="flex flex-row items-center justify-between">
+        <Reveal>
+          <p className="font-black text-4xl">
+            Experiece
+            <span
+              className="text-primary text-6xl"
+              style={{ lineHeight: 0.35 }}
+            >
+              .
+            </span>
+          </p>
+        </Reveal>
+        <div className="grow h-px ml-6 bg-gray-500" />
       </div>
+      {timeline.map((item, index) => (
+        <div key={index} className="mx-4 w-9.12">
+          <TimelineItem
+            year={item.year}
+            title={item.title}
+            duration={item.duration}
+            details={item.details}
+          />
+        </div>
+      ))}
     </div>
   );
 }
@@ -67,11 +65,16 @@ function TimelineItem({ year, title, duration, details }) {
                   </p>
                 </Reveal>
                 <Reveal>
+                  <p className="hidden md:block text-2xl font-bold">{title}</p>
+                </Reveal>
+              </div>
+              <div className="md:hidden">
+                <Reveal>
                   <p className="text-2xl font-bold">{title}</p>
                 </Reveal>
               </div>
               <Reveal>
-                <p className="ms-6 mt-2 text-md">{details}</p>
+                <p className="md:mx-4 mt-2 text-md text-justify">{details}</p>
               </Reveal>
             </div>
           </motion.div>
