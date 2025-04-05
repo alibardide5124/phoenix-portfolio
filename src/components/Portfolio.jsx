@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import portfolio from "../data/portfolio";
 import Reveal from "./utils/Reveal";
+import StarIcon from "./utils/StarIcon";
+import ForkIcon from "./utils/ForkIcon";
 
 function Portfolio({ onClickProject }) {
   return (
@@ -29,9 +31,10 @@ function Portfolio({ onClickProject }) {
                 year={project.year}
                 imageUrl={project.imageUrl}
                 github={project.github}
+                repo={project.repo}
                 skills={project.skills}
                 summary={project.summary}
-                onClickItem={() => {onClickProject(project)}}
+                onClickItem={() => { onClickProject(project) }}
               />
             </div>
           ))}
@@ -41,7 +44,7 @@ function Portfolio({ onClickProject }) {
   );
 }
 
-function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClickItem }) {
+function PortfolioItem({ title, year, imageUrl, github, repo, skills, summary, onClickItem }) {
   const githubIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +76,7 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
         once: true,
       }}
       className="flex flex-col justify-start w-full p-2"
-      
+
     >
       <motion.div
         initial="initial"
@@ -82,11 +85,14 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
         onClick={onClickItem}
       >
         <motion.div variants={imageVariant} className="px-10 absolute start-0 pt-10 y-20 rounded-md object-cover overflow-hidden">
-        <img 
-          src={imageUrl}
-        />
+          <img
+            src={imageUrl}
+          />
         </motion.div>
-        <p className="bg-background text-white text-md absolute bottom-0 start-0 m-2 rounded-md px-2 py-1">&copy; {year}</p>
+        <div className="flex flex-col absolute bottom-0 start-0 m-2 gap-1">
+          <ProjectMetaData repo={repo} />
+          <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1">&copy; {year}</p>
+        </div>
       </motion.div>
       <div
         initial="initial"
@@ -95,11 +101,14 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
         onClick={onClickItem}
       >
         <motion.div variants={imageVariant} className="px-10 pt-10 y-20 rounded-md object-cover overflow-hidden">
-        <img 
-          src={imageUrl}
-        />
+          <img
+            src={imageUrl}
+          />
         </motion.div>
-        <p className="bg-border text-white text-md absolute bottom-0 start-0 m-2 rounded-md px-2 py-1">&copy; {year}</p>
+        <div className="flex flex-col absolute bottom-0 start-0 m-2 gap-1">
+          <ProjectMetaData repo={repo} />
+          <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1">&copy; {year}</p>
+        </div>
       </div>
       <div className="flex flex-row items-center justify-between">
         <Reveal>
@@ -107,19 +116,19 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
         </Reveal>
         <div className="grow h-px mx-2 bg-gray-500" />
         <Reveal>
-            <a href={github} target="_blank" rel="noopener noreferrer" className="flex flex-row  group transition ease-in-out rounded-md items-center justify-center p-1 border-2 border-white hover:bg-white cursor-pointer">
-              {githubIcon} <p className="ps-1 transition ease-in-out group-hover:text-black text-md font-medium">GitHub</p>
-            </a>
+          <a href={github} target="_blank" rel="noopener noreferrer" className="flex flex-row  group transition ease-in-out rounded-md items-center justify-center p-1 border-2 border-white hover:bg-white cursor-pointer">
+            {githubIcon} <p className="ps-1 transition ease-in-out group-hover:text-black text-md font-medium">GitHub</p>
+          </a>
         </Reveal>
       </div>
       <Reveal>
-      <div className="flex flex-wrap px-2  gap-2 overflow-visible">
-              {skills.map((item, index) => (
-                <div key={index} className="rounded-md p-2 bg-border">
-                  <p className="text-xs">{item}</p>
-                </div>
-              ))}
+        <div className="flex flex-wrap px-2  gap-2 overflow-visible">
+          {skills.map((item, index) => (
+            <div key={index} className="rounded-md p-2 bg-border">
+              <p className="text-xs">{item}</p>
             </div>
+          ))}
+        </div>
       </Reveal>
       <Reveal>
         <p className="text-md text-start">
@@ -132,5 +141,24 @@ function PortfolioItem({ title, year, imageUrl, github, skills, summary, onClick
     </motion.div>
   );
 }
+
+function ProjectMetaData({ year, repo }) {
+  const [repoData, setRepoData] = useState({});
+
+  useEffect(() => {
+    fetch(`https://api.github.com/repos/alibardide5124/${repo}`)
+      .then(response => response.json())
+      .then(data => setRepoData(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, [repo]);
+
+  return (
+    <div className="flex flex-column gap-1" >
+      <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1"><StarIcon className="size-5 stroke-black fill-black"/> {repoData.stargazers_count}</p>
+      <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1"><ForkIcon className="size-5 fill-black" /> {repoData.forks_count}</p>
+    </div>
+  );
+
+};
 
 export default Portfolio;
