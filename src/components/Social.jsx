@@ -5,8 +5,7 @@ import LinkedinIcon from "./utils/LinkedinIcon";
 import YouTubeIcon from "./utils/YouTubeIcon";
 
 const Social = () => {
-  const iconsClass =
-    "transition ease-in-out opacity-70 hover:opacity-100 hover:scale-110 fill-stone-900 dark:fill-stone-200 size-6 cursor-pointer";
+  const iconsClass = "transition ease-in-out group-hover:fill-black fill-current dark:fill-stone-200 size-6 mix-blend-multiply"
 
   return (
     <div className="flex flex-row justify-center gap-2 md:gap-4 items-center">
@@ -20,21 +19,30 @@ const Social = () => {
             <FlipLink href="https://youtube.com/@AliBardide">YOUTUBE</FlipLink>
           </div>
         </div>
-        <div className="md:hidden h-full flex flex-row items-center justify-center mt-2 md:mt-0 gap-2">
-          <a href="https://github.com/alibardide5124"><GitHubIcon className={iconsClass} /></a>
-          <a href="https://linkedin.com/in/alibardide"><LinkedinIcon className={iconsClass} /></a>
-          <a href="https://youtube.com/@AliBardide"><YouTubeIcon className={iconsClass} /></a>
+        <div className="md:hidden h-full flex flex-row items-center justify-center gap-2">
+          <SocialMiniIcon href="https://github.com/alibardide5124"><GitHubIcon className={iconsClass}/></SocialMiniIcon>
+          <SocialMiniIcon href="https://linkedin.com/in/alibardide"><LinkedinIcon className={iconsClass} /></SocialMiniIcon>
+          <SocialMiniIcon href="https://youtube.com/@PhoenixCodin"><YouTubeIcon className={iconsClass} /></SocialMiniIcon>
         </div>
       </div>
       <a
         href="https://cvresume.ir/r/DuXe7dbv-E_tRD8CZq7KGA"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm transition ease-in-out rounded-md items-center justify-center py-2 px-4 font-bold text-primary-content border-2 border-primary hover:bg-primary cursor-pointer"
+        className="flex text-sm transition ease-in-out rounded-md items-center justify-center py-2 px-4 font-bold text-primary-content border-2 border-primary hover:bg-primary cursor-pointer"
       >
-        My Resume
+        <p className="hidden md:block">My</p> Resume
       </a>
     </div>
+  );
+};
+
+const SocialMiniIcon = ({ children, href }) => {
+  return (
+  <a href={href} target="_blank" rel="noopener noreferrer" 
+  className="group transition ease-in-out rounded-md items-center justify-center p-1 border-2 border-white hover:bg-white cursor-pointer">
+    {children}
+    </a>
   );
 };
 
