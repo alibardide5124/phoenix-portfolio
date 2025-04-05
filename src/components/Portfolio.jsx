@@ -91,7 +91,7 @@ function PortfolioItem({ title, year, imageUrl, github, repo, skills, summary, o
         </motion.div>
         <div className="flex flex-col absolute bottom-0 start-0 m-2 gap-1">
           <ProjectMetaData repo={repo} />
-          <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1">&copy; {year}</p>
+          <p className="bg-white drop-shadow-lg text-black text-md rounded-md px-2 py-1">&copy; {year}</p>
         </div>
       </motion.div>
       <div
@@ -154,8 +154,8 @@ function ProjectMetaData({ year, repo }) {
 
   return (
     <div className="flex flex-column gap-1" >
-      <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1"><StarIcon className="size-5 stroke-black fill-black"/> {repoData.stargazers_count}</p>
-      <p className="bg-white drop-shadow-md text-black text-md rounded-md px-2 py-1"><ForkIcon className="size-5 fill-black" /> {repoData.forks_count}</p>
+      <p className="bg-white drop-shadow-lg text-black text-md rounded-md px-2 py-1"><StarIcon className="size-5 stroke-black fill-black"/> {repoData.stargazers_count}</p>
+      <p className="bg-white drop-shadow-lg text-black text-md rounded-md px-2 py-1"><ForkIcon className="size-5 fill-black" /> {repoData.forks_count}</p>
     </div>
   );
 

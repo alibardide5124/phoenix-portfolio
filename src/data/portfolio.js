@@ -7,12 +7,26 @@ export default [
     repo: "valentine-game",
     skills: [ "Android", "Jetpack Compose", "Retro Style", "Canvas" ],
     summary: "Android retro-inspired ui game, to ask your valentine",
-    description: `I got the idea and used online assets to design and program this application. It uses compose Canvas an uses StateFlow to keep track of user inputs.
-    The main challenge was getting used to animations and moving character, and also changing character sprite, which was new to me.
-
-    Application ui is designed, inspired by Game Boy style, and pixel games.
-
+    description: `I got the idea and used online assets to design and program this application. It uses compose Canvas an uses StateFlow to keep track of user inputs.\n
+    The main challenge was getting used to animations and moving character, and also changing character sprite, which was new to me.\n
+    \n
+    Application ui is designed, inspired by Game Boy style, and pixel games.\n
+    \n
     It was fun.`,
+  },
+  {
+    title: "Card View Plus",
+    year: 2019,
+    imageUrl: "/assets/card-view-banner.png",
+    github: "https://github.com/alibardide5124/CardViewPlus",
+    repo: "CardViewPlus",
+    skills: [ "Android", "Kotlin", "Card View", "Custom View", "Material Design"],
+    summary: "Customizable CardView for Android",
+    description: 
+    `Back in the day around 2019, I had an old phone with android 4.4 Kitkat, one of my best.\n
+    Problem was, google introduced material libraries after android 5 release, so it wansn't including me. I couldn't do shadows.\n
+    \n
+    But with support libraries - which included CardView - I made a custom version of CardView that can be animated. At least as far as I could make it at that time. Give me some credit I was a kid back then.\n`
   },
   {
     title: "News App",
