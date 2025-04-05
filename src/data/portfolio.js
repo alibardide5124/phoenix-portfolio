@@ -4,7 +4,7 @@ export default [
     year: 2025,
     imageUrl: "/assets/valentine-banner.png",
     github: "https://github.com/alibardide5124/valentine-game",
-    skills: "Android - Jetpack Compose - Retro Style - Canvas",
+    skills: [ "Android", "Jetpack Compose", "Retro Style", "Canvas" ],
     summary: "Android retro-inspired ui game, to ask your valentine",
     description: `I got the idea and used online assets to design and program this application. It uses compose Canvas an uses StateFlow to keep track of user inputs.
     The main challenge was getting used to animations and moving character, and also changing character sprite, which was new to me.
@@ -18,7 +18,7 @@ export default [
     year: 2022,
     imageUrl: "/assets/news-banner.png",
     github: "https://github.com/alibardide5124/News-app",
-    skills: "Android - Jetpack Compose - Hilt - Room",
+    skills: [ "Android", "Jetpack Compose", "Hilt", "Room" ],
     summary: "Android news fetcher app Powered by newsapp.org service.",
     description: `Android newsreader app uses newsapp.org API's. This application is an MVP for experiencing with different API and its android implementation using Jetpack Compose.
 It's of course made by Jetpack Compose and used different composable for experimenting with this new android design system.
@@ -32,7 +32,7 @@ In general, it was an MVP for testing some Jetpack Compose features and getting 
     year: 2021,
     imageUrl: "/assets/notal-banner.png",
     github: "https://github.com/alibardide5124/notal",
-    skills: "Android - Xml - Room database - Notifications",
+    skills: [ "Android", "Xml", "Room database", "Notifications" ],
     summary: "Android note app which makes notes in your phone notification",
     description: `notal is an android app that lets you make a simple note and pin it in your notification, so it's there all the time, and you get to see it in your lock screen.
 notal was one of my first projects that I built it open source. Before that I used to code projects, but they were lost in time and thankfully with GitHub I get to keep my projects such as notal itself.
@@ -44,7 +44,7 @@ It uses XML design system and material 2, which is the latest design by its time
     year: 2023,
     imageUrl: "/assets/compose-shadow-banner.png",
     github: "https://github.com/alibardide5124/ComposeAdvancedShadow",
-    skills: "Jetpack Compose - Custom View - Library",
+    skills: ["Jetpack Compose", "Custom View", "Library"],
     summary: "Jetpack Compose library to make customizable shadows",
     description: `ComposeAdvancedShadow is an open-source Jetpack Compose library that allows developers to add highly customizable shadows to UI elements in their Android applications.
 Unlike the default shadow implementation in Jetpack Compose, which can be complex and not very programmer-friendly, ComposeAdvancedShadow offers a more intuitive and flexible approach.
@@ -57,7 +57,7 @@ ComposeAdvancedShadow enhances the aesthetics of your app and provides the flexi
     year: 2021,
     imageUrl:"/assets/imagine-banner.png",
     github: "https://github.com/alibardide5124/Imagine",
-    skills: "Android - XML - File Compression",
+    skills: ["Android", "XML", "File Compression"],
     summary: "Android image compression without losing quality",
     description: `Imagine is an open-source android app, that compress images up to 70%, and the good part is that it doesnt hurt the quality of your pictures.
 It built with xml design system and has very simple straight forward user interface. Just select your image and it does the magic.
